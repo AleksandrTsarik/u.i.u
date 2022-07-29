@@ -1,0 +1,161 @@
+.b	
+	&-news
+		position: relative
+		@media $phone
+			padding: 40px 0 85px
+		a
+			color: $black
+		&__top
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 100%
+			padding-top 80px
+				@media $phone
+					padding: 0 
+			&-link
+				@media $phone
+					position: absolute
+					left: 0
+					bottom: 30px
+				a
+					display: block
+					color: $linkFont 
+					font-size: 19px
+					line-height: 1.3em
+					font-weight: 600
+					&:hover
+						color: darken($linkFont , 20%)
+						text-decoration: underline
+		&__title
+			font-size: 34px
+			line-height: 0.9em
+			color: $black
+			font-weight 600
+		&__list
+			display: flex
+			margin: 0 -20px
+			padding: 50px 0 90px
+			flex-wrap: wrap
+			@media $desktopB
+				margin: 0 -20px
+			@media $phone
+				padding: 0
+				margin: 0
+		&__item
+			flex: 0 0 25%
+			max-width: 25%
+			color: $black
+			padding: 0 40px 0 20px
+			position: relative
+			border-right: solid 1px $gray
+
+			&:last-child
+				border-right: 0
+			@media $desktop
+				flex: 0 0 50%
+				max-width: 50%
+				&:nth-child(3)
+					display: none
+				&:nth-child(4)
+					display: none						
+				&:nth-child(2)
+					border-right: 0
+			@media $phone
+				padding: 20px 0
+				border-right: 0
+				border-bottom: solid 1px #9A9A9A
+			@media $phone
+				flex: 0 0 100%
+				max-width: 100%
+			&-inner
+				padding-right 10px
+				position: relative
+				@media $desktop
+					padding-right 40px
+				@media $phone
+					padding-right 0
+			&-top
+				padding-bottom 56px
+				position: relative
+				@media $phone
+					padding-bottom 25px
+			&-title
+				font-size: 21px
+				font-weight: 600
+				line-height: 1.1em
+				margin-bottom 15px
+			&-text
+				font-size: 15px
+				font-weight: 400
+				line-height: 1.1em
+			&-date
+				font-weight: 600
+				font-size: 16px
+				line-height: 1.2em
+				margin-top auto
+				position: absolute
+				left: 20px
+				bottom: 0
+				@media $phone
+					position: relative
+					left: auto
+
+//-----news-page
+.b
+	&-news
+		&__wrap
+			@media $phone
+				padding: 0
+		&__list-p
+			display: flex
+			padding: 0
+			margin-bottom -60px
+			@media $phone
+				margin-bottom 0
+		.b-news__item-p
+			flex:  0 0 33.33%
+			max-width: 33.333%
+			border-right: solid 1px $gray
+			margin-bottom 60px
+			display: block
+			@media $desktop
+				flex: 0 0 50%
+				max-width: 50%
+			@media $phone
+				flex: 0 0 100%
+				max-width: 100%
+				border-right: 0
+				margin-bottom 0
+			&:last-child
+				border-right: 0
+			&:nth-child(3n)
+				border-right: 0
+				@media $desktop
+					border-right: solid 1px $gray
+				@media $phone
+					border-right: 0
+			&:nth-child(2n)
+				@media $desktop
+					border-right: 0
+
+		&-open
+			&__content
+				p
+					font-weight: 400
+					font-size: 15px
+					line-height: 1.5em
+					color: $black
+					padding-bottom: 30px
+					&:last-child
+						padding-bottom 0
+				h1
+					margin-bottom 40px
+				h2
+					padding-bottom 40px
+					margin-top -0.3em
+				.b-block-text
+					margin-bottom 45px
+					@media $phone
+						margin-bottom 35px
+					

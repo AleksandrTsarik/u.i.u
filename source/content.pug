@@ -1,0 +1,191 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'content';
+block content
+	.page-container.page-container--fix-header
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'Название раздела', href:'#'},
+			{title:'Название раздела', href:' '}
+			]})
+		.content-wrapper
+			h1.b-news__title.b-title.b-title-strip ЗАГОЛОВОК СТРАНИЦЫ
+			.b-news-open__wrap
+					.b-news-open__inner.b-list__wrap
+						.b-news-open__item.b-list__item
+							a(href="#").b-back-link
+						.b-news-open__item.b-list__item
+							.b-page-subtitle.b-content__content.b-content__content
+								.b-content
+									.border-bottom
+										h2 Заголовок статьи, новости. 
+										.b-block-iframe
+											<iframe width="100%" height="100%" src="https://u-i-u.extteam.ru/upload/medialibrary/4b0/v4ga2lbp4hzsb9ywvhw0vrqql0xs01sx/%D0%9F%D1%80%D0%B5%D0%BC%D0%B8%D1%8F%20%D0%9C%D0%B8%D0%BD%D0%BA%D1%83%D0%BB%D1%8C%D1%82.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										p
+											| Текст статьи. Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+										.b-block-text
+											p Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. 
+											p Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+										p 
+											| В тексте могут быть 
+											a(href="#" )  ссылки
+											| , ссылки которые мы 
+											a(href="#" class="b-link-color--visited") уже посетили
+											| , ссылки на которые мы 
+											a(href="#" class="b-link-color--hover") навели курсор
+											| , тогда они меняют цвет. Вот это чудеса и вошебство.
+									
+									.b-content__float.b-content__float--right.b-content__float-pb
+										div
+											img(src="/f/img/history/item1.jpg", alt="")
+										div
+											| Текст статьи. Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+									.b-content__float.b-content__float--left
+										div
+											img(src="/f/img/history/item1.jpg", alt="")
+										div
+											| Текст статьи. Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе. Текст статьи. Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+									.border-bottom
+										.b-content-slider
+											.b-content-slider__tab-container#id-1
+												img(src="/f/img/content/item1.jpg", alt="")
+											.b-content-slider__tab-container#id-2
+												.video-block
+													video(controls="controls")
+														source(src="https://u-i-u.extteam.ru/upload/medialibrary/4b0/v4ga2lbp4hzsb9ywvhw0vrqql0xs01sx/Премия Минкульт.mp4")
+											.b-content-slider__tab-container#id-3
+												img(src="/f/img/content/item2.jpg", alt="")
+											.b-content-slider__tab-container#id-4
+												img(src="/f/img/content/item3.jpg", alt="")
+											.b-content-slider__tab-container#id-5
+												img(src="/f/img/content/item4.jpg", alt="")
+											.b-content-slider__tab-container#id-6
+												.b-block-iframe
+													<iframe width="100%" height="100%" src="https://u-i-u.extteam.ru/upload/medialibrary/4b0/v4ga2lbp4hzsb9ywvhw0vrqql0xs01sx/%D0%9F%D1%80%D0%B5%D0%BC%D0%B8%D1%8F%20%D0%9C%D0%B8%D0%BD%D0%BA%D1%83%D0%BB%D1%8C%D1%82.mp4?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" autoplay="false" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											.b-content-slider__tab-links.b-content-slider-owl
+												div.b-content-slider__slide
+													a.b-content-slider__tab-link(href="#id-1")
+														img(src="/f/img/content/item1.jpg", alt="")
+												div.b-content-slider__slide
+													a.b-content-slider__tab-link.video-block(href="#id-2")
+														img(src="/f/img/content/fon2.jpg", alt="")
+												div.b-content-slider__slide
+													a.b-content-slider__tab-link(href="#id-3")
+														img(src="/f/img/content/item2.jpg", alt="")
+												div.b-content-slider__slide
+													a.b-content-slider__tab-link(href="#id-4")
+														img(src="/f/img/content/item3.jpg", alt="")
+												div.b-content-slider__slide
+													a.b-content-slider__tab-link(href="#id-5")
+														img(src="/f/img/content/item4.jpg", alt="")
+												div.b-content-slider__slide
+													a.b-content-slider__tab-link.video-block(href="#id-6")
+														img(src="/f/img/content/fon2.jpg", alt="")
+
+									.b-content__list
+										nav
+											ol
+												li Текст статьи. 
+												li Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+												li Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. 
+												li Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе. 
+												li Текст статьи.
+									
+									.b-content-tabs
+										.b-content-tab
+											label.b-content-tab__label 
+												input(type="checkbox" class="b-content-tab__input")
+												span.b-content-tab__name Схема олимпиады
+												span.b-content-tab__checked
+													.b-content-tab__content
+														img(src="/f/img/letter-ico.svg", alt="")
+														div
+															p Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. 
+
+															p Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+										.b-content-tab
+											label.b-content-tab__label 
+												input(type="checkbox" class="b-content-tab__input")
+												span.b-content-tab__name Кому можно принять участие
+												span.b-content-tab__checked
+													.b-content-tab__content
+														img(src="/f/img/letter-ico.svg", alt="")
+														div
+															p Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. 
+
+															p Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+										.b-content-tab
+											label.b-content-tab__label 
+												input(type="checkbox" class="b-content-tab__input")
+												span.b-content-tab__name Как принять участие
+												span.b-content-tab__checked
+													.b-content-tab__content
+														img(src="/f/img/letter-ico.svg", alt="")
+														div
+															p Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. 
+
+															p Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+										.b-content-tab
+											label.b-content-tab__label 
+												input(type="checkbox" class="b-content-tab__input")
+												span.b-content-tab__name Как проводятся отборы
+												span.b-content-tab__checked
+													.b-content-tab__content
+														img(src="/f/img/letter-ico.svg", alt="")
+														div
+															p Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. 
+
+															p Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+									.b-block-iframe
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/5t2Rsg_ZCys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									.b-content__float.b-content__float--right.b-content__float-pb
+										div
+											img(src="/f/img/history/item1.jpg", alt="...")
+											.b-content-img__subtext Блестящая иллюстрация текста.<br>© ВГТРК. 2021
+										div
+											p 
+												| Текст статьи. Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+	
+									.b-content__blockquote
+										| Обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+
+									.b-content__file
+									h3 Приложенные файлы
+									p Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+									.b-content-file
+										.b-content-file__list.b-content-file__list--mw
+											div.b-content-file__item
+												div.b-content-file__img
+													img(src="/f/img/file/excel.svg", alt="")
+												.b-content-file__info 
+													a(href="#") Длинное название файла.
+													p Формат Excel
+													p Размер 1,2 Мб
+											div.b-content-file__item
+												div.b-content-file__img
+													img(src="/f/img/file/word.svg", alt="")
+												.b-content-file__info 
+													a(href="#") Длинное название файла.
+													p Формат Excel
+													p Размер 1,2 Мб
+
+											div.b-content-file__item
+												div.b-content-file__img
+													img(src="/f/img/file/pp.svg", alt="")
+												.b-content-file__info 
+													a(href="#") Название файла.
+													p Формат Excel
+													p Размер 1,2 Мб
+
+											div.b-content-file__item
+												div.b-content-file__img
+													img(src="/f/img/file/pdf.svg", alt="")
+												.b-content-file__info 
+													a(href="#") Название файла.
+													p Формат Excel
+													p Размер 1,2 Мб
+
+
+						.b-news-open__item.b-list__item
+							include _blocks/network

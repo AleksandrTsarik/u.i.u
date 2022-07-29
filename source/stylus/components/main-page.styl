@@ -1,0 +1,206 @@
+.b
+	&__info
+		overflow: hidden
+		@media $tablet
+			display: none
+	&-info
+		overflow: hidden
+		&__list
+			display: flex
+			margin: 0 -50px
+			@media $desktop
+				margin: 0 -20px
+			.b-info__item
+				color: rgba($black, 0.42)
+		&__item
+			flex: 0 0 25%
+			max-width: 25%
+			text-transform: uppercase
+			color: rgba($black, 0.42)
+			position: relative
+			transition: 0.3s
+			padding: 0 50px
+			overflow: hidden
+			@media $desktop
+				padding: 0 20px
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				height: 20px
+				background: $lightgreen
+				transition: .8s
+				width: 0
+			&:hover, &.active
+				color: $black
+				&:before
+					width: 100%               
+			&:after
+				content: ''
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				width: 1px
+				height: 70%
+				background: #9A9A9A
+			&:last-child
+				&:after
+					background: 0
+			&-inner
+				padding: 75px 0
+		&__title
+			font-size: 17px
+			line-height: 1.4em
+			font-weight 700
+		&__subttile
+			font-weight 400
+
+	&-offer
+		margin-bottom 80px
+		@media $desktopB
+			margin: 0 -50px 40px
+		@media $phone
+			margin: 0 -20px 0
+		&__list
+			display: flex
+			flex-wrap: wrap
+		&__bg
+			position: relative
+			padding: 60px 55px
+			color: $white
+			height: 100%
+			img
+				display: flex
+				margin-left auto
+			@media $desktop
+				padding: 35px 30px
+			@media $phoneS
+				padding: 25px 15px
+			@media $tablet 
+				flex: 0 0 100%
+				max-width: 100%
+			&--red
+				background: $red
+			&--blue
+				background: $darkoffer
+			&--green
+				background: $green
+				position: relative
+				.b-offer__item-img
+					position: absolute
+					right: -55px
+					top: 0
+					width: 185px
+					height: 185px
+					@media $desktop
+						right: -30px
+					@media $phoneS
+						right: -15px
+					img
+						width: 100%
+						@media $desktop
+							max-width: 80%
+				.b-offer__item-text
+					flex: 0 0 70%
+					max-width: 70%
+					min-height: 160px
+					@media $beforePhoneS
+						margin-top 20px
+						flex: 0 0 50%
+						max-width: 50%
+					@media $phoneS
+						flex: 0 0 40%
+						max-width: 40%
+						margin-top 0
+		&__item
+			flex: 0 0 33.333%
+			max-width: 33.333%
+			position: relative
+			@media $tabletB
+				flex: 0 0 100%
+				max-width: 100%
+			@media $phone
+				flex: 0 0 100%
+				max-width: 100%
+			&-foto
+				position: absolute
+				top: 0
+				right: 0
+				z-index 5
+				@media $tabletB
+					width: 155px
+				@media $beforePhoneS
+					width: 145px
+				@media $phoneS
+					width: 135px
+				img
+					display: block
+					max-height: 225px
+					@media $desktop
+						max-height: 185px
+					@media $phoneS
+						max-height: 150px
+			&-title
+				font-weight: 600
+				font-size: 24px
+				line-height: 1.3em
+				padding-right 50%
+				padding-bottom 100px
+				@media $desktop
+					font-size: 20px
+				@media $tabletB
+					padding-bottom 60px
+					font-size: 24px
+					padding-right 80%
+				@media $beforePhoneS
+					font-size: 20px
+			&-middle
+				position: relative
+				display: flex
+				justify-content: space-between
+				padding-bottom 60px
+				@media $tabletB
+					padding-bottom 10px
+			&-text
+				font-weight: 400
+				font-size: 28px
+				line-height: 1.1em
+				flex: 0 0 70%
+				max-width: 70%
+				@media $desktop
+					font-size: 20px
+				@media $tabletB
+					font-size: 28px
+				@media $beforePhoneS
+					font-size: 20px
+
+				position: relative
+				z-index 1
+			&-link
+				position: absolute
+				bottom: 60px
+				left: 55px
+				display: flex
+				align-items: center
+				@media $desktop
+					left: 30px
+					bottom: 35px
+				@media $phone
+					position: relative
+					bottom: 0
+					left: 0
+				a
+					display: flex
+					align-items: center
+					font-weight: 700
+					font-size: 20px
+					line-height: 1.4em
+					color: $white
+					transition: 0.3s
+					&:hover
+						transform: scale(1.05)
+					img
+						margin-left 10px
+						margin-top 0px

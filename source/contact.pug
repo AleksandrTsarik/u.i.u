@@ -1,0 +1,58 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'contact';
+block content
+	.page-container.page-container--fix-header
+
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'Контакты', href:''}
+			]})
+		.content-wrapper
+			.b-contact
+				.b-contact__inner
+					h1.b-contact__title.b-title.b-title-strip Контакты
+					.b-contact__wrap.b-list__wrap
+
+						.b-contact__item.b-list__item
+							.b-list__item-img
+								img(src="/f/img/contact-ico.svg", alt="")
+
+						.b-contact__item.b-list__item
+							.b-contact__item-title 127427 Россия, Москва, <br /> ул. Академика Королева, дом 12. 
+							.b-contact__item-subtitle С пометкой «Умницы и Умники»
+							.b-contact__item-map
+								//- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A918db90a16c9f15ce99784b3b8d7a11e040e6da3261bd570387cdead2cf51519&amp;source=constructor" width="100%" height="602" frameborder="0"></iframe>
+
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7538.365383704761!2d37.61505922802109!3d55.82501829672184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5361368955d5f%3A0x1b52bef3081630c6!2z0YPQuy4g0JDQutCw0LTQtdC80LjQutCwINCa0L7RgNC-0LvQtdCy0LAsIDEyLCDQnNC-0YHQutCy0LAsIDEyNzQyNw!5e0!3m2!1sru!2sru!4v1655224895034!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							.b-contact__item-block.b-contact-block__list
+
+								.b-contact-block__item
+									.b-contact-block__item-img
+										img(src="/f/img/phone-ico.svg", alt="")
+									.b-contact-block__item-text
+										.b-contact-block__item-title Телефон 
+										.b-contact-block__item-subtitle +7 (495) 617-7703
+
+								.b-contact-block__item
+									.b-contact-block__item-img
+										img(src="/f/img/mail-ico.svg", alt="")
+									.b-contact-block__item-text
+										.b-contact-block__item-title E-mail
+										.b-contact-block__item-subtitle 
+											p olymp@inno.mgimo.ru
+											p umnitsy_i_umniki@mail.ru 
+
+								.b-contact-block__item
+									.b-contact-block__item-text
+										.b-contact-block__item-title Социальные сети 
+										.b-contact-block__item-link
+											a(href="#")
+												img(src="/f/img/vk-ico.svg", alt="")
+											a(href="#")
+												img(src="/f/img/footer/youtube.png", alt="")
+
+
+						.b-contact__ritem.b-list__item
+							include _blocks/network

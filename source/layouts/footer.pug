@@ -1,0 +1,78 @@
+footer.footer
+	.content-wrapper
+		.footer__wrap 
+			.footer__list 
+				.footer__item 
+					nav.footer__menu.footer__menu--top
+						ul.footer__menu-list 
+								-
+									var link = [
+										{
+											name: 'Политика кониденциальности',
+											link: 'https://umniki.club/docs/politika-konfidentsialnosti/',
+										},
+										{
+											name: 'Условия использования',
+											link: '#',
+										},
+										{
+											name: 'Авторское право',
+											link: '#',
+										},
+									]
+								each item in link
+									li
+										a(href="" + item.link) !{item.name}
+
+					nav.footer__menu
+						ul.footer__menu-list 
+							each list in ['Карта сайта','Метрики посещяемости','Контакты']
+								li
+									a(href="#")= list
+					.footer__item-img
+						img(src="/f/img/footer/logo.png", alt="")
+
+				.footer__item 
+					.footer__item-title Мы в социальных сетях
+					.footer__item-link
+						each img in ['/f/img/footer/telegram.svg','/f/img/footer/vk.svg','/f/img/footer/youtube.svg']
+							div
+								a(href="#")
+									img(src=""+img, alt="")
+				.footer__item
+					.footer__form.f-form
+						form(action="")
+							.f-form__inner
+								.f-form__title ОБРАТНАЯ СВЯЗЬ
+								.f-form-block
+									label.f-form-block__label ФИО
+										.f-form-block__input
+											input(type="text" class="js-vall" name="user_name" required) 
+
+								.f-form-block
+									label.f-form-block__label Email
+										.f-form-block__input
+											input(type="text" class="js-vall js-email" name="user_eamil" required) 
+								
+								.f-form-block
+									label.f-form-block__label Телефон
+										.f-form-block__input
+											input(type="tel"  class="js-vall js-phone" name="user_phone" required) 
+
+								.f-form-block
+									.f-form-block__label Ваше сообщение
+										.f-form-block__textarea
+											textarea(required class="js-vall" name="user_report")
+
+								.f-form-block.f-form-block--check
+									.b-essay-form__checkbox
+											label.b-essay-form__checkbox-label
+												a(href="https://umniki.club/docs/politika-konfidentsialnosti/" target="_blank") Согласен на обработку персональных данных	
+												input(type="checkbox",  required name="" checked class="b-essay-form__checkbox-input js-vall")
+												span.b-essay-form__checkbox-checked
+								.f-form-block
+									button.f-form-block__btn(type="submit" ) Отправить сообщение			
+			.footer-row
+				| © «Умницы и Умники». 2022
+				
+						

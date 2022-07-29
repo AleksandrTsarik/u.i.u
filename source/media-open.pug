@@ -1,0 +1,68 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'media-open';
+block content
+	.page-container.page-container--fix-header
+
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'Медиа', href:'#'},
+			{title:'Название альбома', href:''},
+			]})
+
+		.content-wrapper
+			-
+				var picture = [
+					{
+						img: '/f/img/img-ico.svg',
+						bg: '',
+						name: 'Название альбома',
+						date: '2021 год',
+						url: '#',
+					},
+					{
+						img: '',
+						bg: '/f/img/history/item2.jpg',
+						name: 'Название альбома',
+						date: '2021 год',
+						url: '#',
+					},
+					{
+						img: '/f/img/img-ico.svg',
+						bg: '',
+						name: 'Название альбома',
+						date: '2021 год',
+						url: '#',
+					},
+					{
+						img: '',
+						bg: '/f/img/history/item5.jpg',
+						name: 'Название альбома',
+						date: '2021 год',
+						url: '#',
+					},
+				]
+			.b-media.b-media-open
+				.b-media__inner
+					h1.b-questions__title.b-title.b-title-strip Название альбома
+					.b-media__wrap.b-list__wrap
+						.b-media__block.b-list__item
+							a(href="#").b-back-link
+						.b-media__block.b-list__item
+							.b-media__list
+								each item in picture
+									a(href=""+item.url).b-media__item.open-modal
+										.b-media__item-img
+											if item.bg !=''
+												.b-media__item-img--bg(style="background-image: url('" + item.bg +"')" )
+											if item.img !=''
+												img(src=""+ item.img, alt="")
+										.b-media__item-title !{item.name}
+										.b-media__item-subtitle !{item.date}
+
+							include _blocks/pagination
+							
+						.b-media__block.b-list__item
+							include _blocks/network
+				include _blocks/video-slider

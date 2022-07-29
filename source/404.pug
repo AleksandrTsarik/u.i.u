@@ -1,0 +1,26 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = '404';
+block content
+	.page-container.page-container--fix-header
+
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'404', href:''}
+			]})
+		.content-wrapper
+			.b-error.b-page
+				.b-title-strip
+				.b-error-list.b-list__wrap
+
+					.b-error__item.b-list__item
+						.b-list__item-img
+							img(src="/f/img/error-ico.svg", alt="")
+
+					.b-error__item.b-list__item
+						.b-error__img
+							img(src="/f/img/404.svg", alt="")
+						.b-error__text
+							| К сожалению, запрашиваемая страница не найдена. <br /> Возможно, вы перешли по ссылке, в которой была допущена ошибка, или ресурс был удален. <br /> Попробуйте перейти на 
+							a(href="#")  главную страницу.

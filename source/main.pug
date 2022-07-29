@@ -1,0 +1,131 @@
+extends layouts/default
+
+block header
+	include layouts/header-news 
+
+block pageVar
+	-pageTitle = 'main';
+
+
+block content
+	.page-container
+		.content-wrapper
+			.b__info
+				.b-info__list
+					- 
+						var info = [
+							{
+								title: '«Греция древняя и недревняя»',
+								subtitle: 'Встреча ТРЕТЬЯ.',
+								id: '1'
+
+							},
+							{
+								title: '«Вопрос на засыпку».',
+								subtitle: 'Документальный фильм о Юрии Вяземском',
+								id: '2'
+							},
+							{
+								title: 'Умницы и Умники. ',
+								subtitle: 'Юбилейный выпуск',
+								id: '3'
+							},
+							{
+								title: '«Греция древняя и недревняя».',
+								subtitle: 'Встреча четвертая.',
+								id: '4'
+							},
+						]						
+
+					each item in info
+						a.b-info__item(href="#" data-news="" + item.id)
+							.b-info__item-inner
+								.b-info__title !{item.title}
+								.b-info__subttile !{item.subtitle}
+			.b-offer
+				.b-offer__list
+					-
+						var offer = [
+							{
+								title: 'СТАТЬ АГОНИСТОМ',
+								foto: '',
+								text: 'Уверены в своих знаниях и готовы побеждать?',
+								img: '/f/img/item1.png',
+								link: 'Заявка на участие',
+								imgArrow: '/f/img/arrow.svg',
+								class: 'blue',
+							},
+							{
+								title: 'ИСТОРИИ УСПЕХА',
+								foto: '/f/img/history/foto-small.jpg',
+								text: 'Дарья Иванова: «Это лучшее испытание для интеллекта»',
+								img: '/f/img/item2.png',
+								link: 'Все истории ',
+								imgArrow: '/f/img/arrow.svg',
+								class: 'green',
+							},
+							{
+								title: 'УЗНАТЬ БОЛЬШЕ',
+								foto: '',
+								text: 'Какие дисциплины нужно знать для участия в программе?',
+								img: '/f/img/item3.png',
+								link: 'База знаний',
+								imgArrow: '/f/img/arrow.svg',
+								class: 'red',
+							},
+						]
+					each item in offer
+						.b-offer__item
+							.b-offer__bg(class="b-offer__bg--" + item.class)
+								if item.foto != ''
+									.b-offer__item-foto
+										img(src=""+ item.foto, alt="")
+								.b-offer__item-top
+									.b-offer__item-title !{item.title}
+								.b-offer__item-middle 
+									.b-offer__item-text !{item.text}
+									.b-offer__item-img
+										img(src=""+item.img , alt="")
+								.b-offer__item-bottom
+									.b-offer__item-link
+										a(href="#") !{item.link} 
+											img(src=""+item.imgArrow, alt="")
+
+
+			.b-news
+				.b-news__top 
+					.b-news__title Новости
+					.b-news__top-link
+						a(href="#") Все новости
+				.b-news__list
+					- 
+						var news = [
+							{
+								title: 'Гуманитарная олимпиада для школьников «Умницы и умники» впервые прошла в Калининграде. ',
+								text: 'Побороться за право принять участие в проекте решили более ста десятиклассников, которые написали эссе и прошли собеседование.',
+								date: '1 июня 2021',
+							},
+							{
+								title: 'Завершился региональный этап олимпиады «Умницы и умники».',
+								text: 'В Великом Новгороде проходит финал региональной олимпиады «Умницы и умники».',
+								date: '22 августа 2021',
+							},
+							{
+								title: 'Поддержка фонда культурных инициатив',
+								text: 'Юрий Вяземский заявил о расширении аудитории программы «Умницы и Умники» благодаря гранту.',
+								date: '12 сентября 2021',
+							},
+							{
+								title: 'Пять ульяновских школьников выступят в телевизионной версии передачи.',
+								text: '23 мая состоялся региональный этап телевизионной гуманитарной олимпиады. ',
+								date: '12 сентября 2021',
+							},
+						]
+					
+					each item in news
+						.b-news__item
+							.b-news__item-inner
+								.b-news__item-top
+									.b-news__item-title !{item.title}
+									.b-news__item-text !{item.text}
+							.b-news__item-date !{item.date}

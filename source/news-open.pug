@@ -1,0 +1,36 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'news';
+block content
+	.page-container.page-container--fix-header
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'Новости', href:''}
+			]})
+		.content-wrapper
+			.b-title--h2.b-news__title.b-title.b-title-strip НОВОСТИ
+			.b-news-open__wrap
+					.b-news-open__inner.b-list__wrap
+						.b-news-open__item.b-list__item
+							a(href="#").b-back-link
+						.b-news-open__item.b-list__item
+							.b-news-open__content.b-page-subtitle
+								h1.fs--h1 Гуманитарная олимпиада для школьников «Умницы <br> и умники» впервые прошла в Калининграде. 
+								.b-block-iframe
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/5t2Rsg_ZCys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								p
+									| Текст статьи. Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+								.b-block-text
+									p Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. 
+									p Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+								p 
+									| В тексте могут быть 
+									a(href="#" )  ссылки
+									| , ссылки которые мы 
+									a(href="#" class="b-link-color--visited") уже посетили
+									| , ссылки на которые мы 
+									a(href="#" class="b-link-color--hover") навели курсор
+									| , тогда они меняют цвет. Вот это чудеса и вошебство.
+						.b-news-open__item.b-list__item
+							include _blocks/network

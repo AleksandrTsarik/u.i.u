@@ -1,0 +1,18 @@
+block pageVar
+	-var pageTitle = "", auth = false;
+doctype html
+html(lang="ru")
+	block head
+		include head
+	body
+		include _mixins
+
+		block header
+			include header
+			
+		block content
+
+		block footer
+			include footer
+			include scripts
+

@@ -1,0 +1,59 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'news';
+block content
+	.page-container.page-container--fix-header
+
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'Новости', href:''}
+			]})
+		.content-wrapper
+			.b-news
+				.b-news__inner
+					h1.b-news__title.b-title.b-title-strip НОВОСТИ
+					.b-news__wrap.b-list__wrap
+						.b-news__left.b-list__item
+							.b-list__item-img
+								img(src="/f/img/news-ico.svg", alt="")
+						.b-news__middle.b-list__item
+							.b-news__list.b-news__list-p
+								- 
+									var news = [
+										{
+											title: 'Гуманитарная олимпиада для школьников «Умницы и умники» впервые прошла в Калининграде. ',
+											text: 'Побороться за право принять участие в проекте решили более ста десятиклассников, которые написали эссе и прошли собеседование.',
+											date: '1 июня 2021',
+										},
+										{
+											title: 'Завершился региональный этап олимпиады «Умницы и умники».',
+											text: 'В Великом Новгороде проходит финал региональной олимпиады «Умницы и умники».',
+											date: '22 августа 2021',
+										},
+										{
+											title: 'Поддержка фонда культурных инициатив',
+											text: 'Юрий Вяземский заявил о расширении аудитории программы «Умницы и Умники» благодаря гранту.',
+											date: '12 сентября 2021',
+										},
+										{
+											title: 'Пять ульяновских школьников выступят в телевизионной версии передачи.',
+											text: '23 мая состоялся региональный этап телевизионной гуманитарной олимпиады. ',
+											date: '12 сентября 2021',
+										},
+										{
+											title: 'Гуманитарная олимпиада для школьников «Умницы и умники» впервые прошла в Калининграде. ',
+											text: 'Побороться за право принять участие в проекте решили более ста десятиклассников, которые написали эссе и прошли собеседование.',
+											date: '1 июня 2021',
+										},
+									]
+								each item in news
+									a(href="#").b-news__item.b-news__item-p
+										.b-news__item-inner
+											.b-news__item-top
+												.b-news__item-title !{item.title}
+												.b-news__item-text !{item.text}
+										.b-news__item-date !{item.date}
+												
+						.b-news__right.b-list__item
+							include _blocks/network

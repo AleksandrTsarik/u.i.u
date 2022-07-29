@@ -1,0 +1,71 @@
+.b
+   &-contact
+      &__item
+         &-title
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.1em
+            color: $black
+            padding: 0 0 20px 0
+         &-subtitle
+            font-weight: 700
+            font-size: 18px
+            line-height: 1.1em
+            color: $black
+            padding: 0 0 10px 0
+         &-map
+            // padding-bottom 42%
+            // position: relative
+            border-radius: 10px
+            overflow: hidden
+            height: 420px
+            margin-bottom 60px
+            // iframe
+            //    flex-grow: 1
+            //    height: 100%
+            //    position: absolute
+            //    left: 0
+            //    right: 0
+
+      &-block
+         &__list
+            display: flex
+            justify-content: space-between
+            margin: 0 -40px
+            @media $tabletB
+               flex-wrap: wrap
+               margin: 0
+         &__item
+            display: flex
+            align-items: flex-start
+            padding: 0 40px
+            @media $tabletB
+               flex: 0 0 100%
+               max-width: 100%
+            @media $desktopS
+               flex-wrap: wrap
+               padding: 15px 0
+            &-img
+               margin: 0 20px 0 0
+               width: 45px
+               height: 55px
+               @media $desktopS
+                  flex: 0 0 100%
+                  max-width: 100%
+            &-title
+               font-weight: 700
+               font-size: 18px
+               line-height: 1.1em
+               color: $black
+
+            &-subtitle
+               font-weight: 400
+               font-size: 18px
+               line-height: 1.1em
+               color: $black
+
+            &-link
+               a
+                  display: inline-block
+               a + a
+                  margin-left 20px

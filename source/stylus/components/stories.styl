@@ -1,0 +1,91 @@
+.b
+	&-page
+		&__img-stories
+			&:after
+				content: ''
+				background-image: url('/f/img/item2.png')
+				padding-bottom 185px
+				width: 185px
+				@media $phone
+					padding-bottom 90px
+				@media $beforePhoneS
+					right: 0
+					padding-bottom 60px
+				@media $phoneS
+					padding-bottom 40px
+	&-stories
+		&__title
+			margin-top auto
+			position: relative
+			&-img
+				max-width: 185px
+				
+		&-open
+			&__content
+				> div:first-of-type
+					margin-bottom 20px
+				h1
+					margin-bottom 60px
+					margin-top -0.3em
+				h2
+					font-weight: 700
+					line-height: 1.1em
+					margin-bottom 16px
+					max-width: 95%
+				h3
+					font-weight: 700
+					line-height: 1.1em
+
+
+//--------_blocks
+
+.b
+	&-stories
+		&-top
+			margin-bottom 30px
+		&-middle
+			margin-bottom 30px
+		&__list
+			column-count: 3
+			margin: 0 -10px
+			@media $desktop
+				column-count: 2
+			@media $beforePhoneS
+				column-count: 1
+		&__item
+			break-inside: avoid
+			display: block
+			padding: 20px 10px 40px
+			overflow: hidden
+
+			&:hover .b-stories__img
+				transform: scale(1.05)
+			img
+				width: 100%
+		&-top
+			overflow: hidden
+		&__img
+			overflow: hidden
+			transition: 0.8s
+		&-item
+			&__title
+				font-weight: 700
+				font-size: 22px
+				line-height: 1.2em
+				color: $black
+				margin-bottom 1em
+			&__text
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.3em
+				color: $black
+			&__date
+				font-weight: 600
+				font-size: 14px
+				line-height: 1.3em
+				color: $black
+
+.b-stories__wrap
+	.b-offer__item-link
+		img
+			max-width: 10%

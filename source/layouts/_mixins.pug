@@ -1,0 +1,19 @@
+mixin breadcrumbs(param)
+	section.b-breadcrumbs
+		.content-wrapper
+			.b-breadcrumbs__wrapper
+				each item,index in param.path
+					if item.href && item.href!=''
+						//-a.b-breadcrumbs__item(href=""+item.href)!= item.title
+
+						span.b-breadcrumbs__item(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+							a(href=""+item.href itemprop="item")
+								span(itemprop="name")!= item.title
+								meta(itemprop="position" content=""+index)
+
+					else
+						//-span.b-breadcrumbs__item!= item.title
+
+						span.b-breadcrumbs__item(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+							span(itemprop="name")!= item.title
+							meta(itemprop="position" content=""+index)

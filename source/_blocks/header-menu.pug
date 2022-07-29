@@ -1,0 +1,31 @@
+nav.header__menu
+	ul.header__list
+		li.header__list-item._active
+			span
+				| Участие <br> в олимпиаде 
+			ul.header__sublist
+				each item in ['Формат участия','Расписание сезона','Регионы-участники','Требования к эссе',]
+					li 
+						a(href="#")  !{item}
+		li.header__list-item
+			span
+				| оБ ОЛИМПИАДЕ
+			ul.header__sublist
+				each item in ['История создания и развития Олимпиады','Регламент','Руководство и партнеры','Истории успеха',]
+					li
+						a(href="#")  !{item}
+		li.header__list-item
+			span
+				| РЕГИОНАЛЬНОЕ <br> ДВИЖЕНИЕ
+			ul.header__sublist
+				each item in ['Регионы-участники','Расписание региональных этапов']
+					li 
+						a(href="#")  !{item}
+		li.header__list-item
+			span
+				| УЗНАЙ <br> БОЛЬШЕ 
+			ul.header__sublist
+				each item in ['Темы игр','Темы эссе']
+					li 
+						a(href="#")  !{item}
+

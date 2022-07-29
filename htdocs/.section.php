@@ -1,0 +1,3 @@
+<?
+$sSectionName = "Главная";
+$arDirProperties = array();

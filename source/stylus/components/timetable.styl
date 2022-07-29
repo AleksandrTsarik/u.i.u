@@ -1,0 +1,215 @@
+.b
+	&-timetable
+		&__title
+			font-weight: 700
+			font-size: 21px
+			line-height: 1.2em
+			color: $black
+			padding-bottom 30px
+		&__text
+			font-weight: 400
+			font-size: 15px
+			line-height: 1.5em
+			color: $black
+			p
+				padding-bottom 25px
+				&:last-child
+					padding-bottom 35px
+		&-calendar
+			&__mounth
+				display: flex
+				align-items: center
+				span
+					font-style: normal
+					display: block
+					padding: 0 25px
+					font-weight: 500
+					font-size: 21px
+					line-height: 1.1em
+					color: $black
+				&-btn
+					width: 17px
+					height: 17px
+					cursor: pointer
+					position: relative
+					&:after
+						content: ''
+						position: absolute
+						display: block
+						top: 0
+						left: 0
+						width: 17px
+						height: 17px
+						border-bottom: solid 3px $green
+						border-left: solid 3px $green
+					&--left
+						transform:  rotate(45deg)
+					&--right
+						transform: rotate(-135deg)
+		&-table
+			padding: 40px 0
+			table
+				width: 100%
+				border-collapse: collapse
+				thead
+					margin: 0 0 20px
+					tr
+						margin-bottom 20px
+						&.b-timetable--mobile
+							display: none
+							@media $desktopS
+								display: table-row
+						&.b-timetable--desktop
+							@media $desktopS
+								display: none
+					th
+						font-weight: 500
+						font-size: 14px
+						line-height: 1.3em
+						color: $black
+						flex: 0 0 14.28%
+						max-width: 14.28%
+						width: 14.28%
+						padding: 0 0 20px
+	
+				tbody
+					margin-top 20px
+					padding-top 20px
+					tr
+						width: 100%
+					td
+						padding: 17px 5px 17px 10px
+						border: solid 1px $input
+						transition: .3s
+						position: relative
+						font-weight: 600
+						font-size: 18px
+						line-height: 1.1em
+						color: $darkgray
+						&.event-day-nonempty
+							cursor: pointer
+							&:hover
+								background: $input
+								color: $black
+						&._active-c
+							color: $black
+							&._active
+								background: $header
+								color: $white
+						&._active-bg
+							background: $green
+							color: $input
+							border: solid 1px $input
+							&._active
+								background: $header
+								color: $white
+						.table-color
+							display: flex
+							flex-direction: row-reverse
+							z-index 5
+							position: absolute
+							right: 10px
+							top: 10px
+							flex-wrap: wrap
+							max-width: 40%
+							@media $tabletB
+								right: 5px
+								top: 5px
+							@media $beforePhoneS
+								right: 2px
+								top: 2px
+								flex-direction: column
+							span
+								display: block
+								width: 10px
+								height: 10px
+								// flex: 0 0 10px
+								// max-width: 10px
+								margin: 2.5px
+								@media $tabletB
+									width: 8px
+									height: 8px
+								@media $beforePhoneS
+									width: 4px
+									height: 4px
+							&--o
+								background: $orange
+							&--b
+								background: $blue
+							&--g
+								background: $lightgreen
+							&--y
+								background: $yellow
+							&--p
+								background: $purpleness
+		&__date
+			font-weight: 600
+			font-size: 34px
+			line-height: 1.3em
+			color: $black
+			padding: 0 0 45px 0
+		&-list
+			&-item
+				padding: 0 0 50px
+				&:last-child
+					padding: 0
+				&__color
+					width: 20px
+					height: 20px
+					margin: 0 10px 10px 0
+
+					&--o
+						background: $orange
+					&--b
+						background: $blue
+					&--g
+						background: $lightgreen
+					&--y
+						background: $yellow
+					&--p
+						background: $purpleness
+				&__block
+					display: flex
+				&__img
+					margin: 0 10px 10px 0
+					max-width: 20px
+				&__time
+					align-items: center
+				&__text
+					font-weight: 500
+					font-size: 15px
+					line-height: 1.2em
+					color: $black
+				&__info
+					padding: 20px 0 20px
+					p
+						padding: 0 0 10px
+				&__timetable
+					padding-bottom 30px
+					.b-timetable-list-item__text
+						font-weight: 500
+						font-size: 21px
+						line-height: 1.1em
+						color: $black
+				&__location
+					padding-bottom 15px
+				&__info
+					font-weight: 400
+					font-size: 15px
+					line-height: 1.5em
+					color: $black
+				&__btn
+					button
+						color: $green
+						font-weight: 700
+						font-size: 18px
+						line-height: 1.2em
+						letter-spacing: -0.01em
+						border: solid 1px $green
+						padding: 19px 34px
+						background: #fff
+						transition: .4s
+						&:hover
+							background: $green
+							color: $white
+							transition: .4s

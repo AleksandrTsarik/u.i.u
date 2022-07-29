@@ -1,0 +1,148 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'Расписание';
+block content
+	.page-container.page-container--fix-header
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'Участие в Олимпиаде', href:'#'},
+			{title:'Расписание сезона', href:''}
+			]})
+		.content-wrapper
+			.b-timetable
+				.b-timetable__inner
+					h1.b-title.b-title-strip Расписание сезона
+					.b-timetable__wrap.b-list__wrap
+
+						.b-timetable__item.b-list__item
+							.b-list__item-img
+								img(src="/f/img/timetable-ico.svg", alt="")
+
+						.b-timetable__item.b-list__item
+							h2.b-timetable__title Вводный заговок о расписании сезона
+							.b-timetable__text
+								p ТВ-олимпиада, которую 28 лет назад придумал преподаватель МГИМО, писатель и телеведущий «заумник» Александр Вяземский, проходит в несколько этапов в течение всего учебного года, с сентября по июнь. Александра, ученица нижегородской авторской академической школы № 186 (НААШ), рассказала, что об этой олимпиаде она узнала в 10‑м классе от учителя по литературе.
+								p – В конце марта 2019 года моя учительница русского и литературы сказала, что через пару дней будет проводиться конкурс эссе для «Умниц и умников». Я тогда мало знала о передаче, но поучаствовать согласилась, – вспоминает девушка. – После этого, к своему собственному удивлению, я прошла все этапы в Нижнем, дойдя до регионального финала. Я стала абсолютным победителем. Предстоящая поездка в Москву казалась мне тогда нереальной, но я решила, что буду готовиться, потому что подобные шансы выпадают нечасто.
+							.b-timetable-calendar
+								.b-timetable-calendar__mounth
+									.b-timetable-calendar__mounth-btn--left.b-timetable-calendar__mounth-btn
+										button 
+									span Август 2022
+									.b-timetable-calendar__mounth-btn--right.b-timetable-calendar__mounth-btn
+										button 
+							.b-timetable-table
+								table
+									thead 
+										tr.b-timetable--desktop
+											th Понедельник
+											th Вторник
+											th Среда
+											th Четверг
+											th Пятница
+											th Суббота
+											th Воскресенье
+										tr.b-timetable--mobile
+											th Пн
+											th Вт
+											th Ср
+											th Чт
+											th Пт
+											th Сб
+											th Вс
+									tbody 
+										tr
+											td 
+											td 1
+											td 2
+											td._active-c 3
+												span.table-color
+														span.table-color--b
+											td 4
+											td 5
+											td 6
+										tr
+											td 7
+											td 8
+											td 9
+											td 10
+											td 11
+											td 12
+											td 13
+										tr 
+											td 14
+											td._active-bg 15
+												span.table-color
+													span.table-color--g
+													span.table-color--o
+													span.table-color--b
+													span.table-color--p
+													span.table-color--y
+											td 16
+											td 17
+											td 18
+											td._active-c 19
+												span.table-color
+													span.table-color--b
+													span.table-color--g
+											td 20
+										tr
+											td 21
+											td 22
+											td 23
+											td 24
+											td 25
+											td 26
+											td 27
+										tr
+											td 28
+											td 29
+											td 30
+											td 31
+											td
+											td 
+											td
+													
+							.b-timetable__date 14 августа 2022
+							.b-timetable__list.b-timetable-list
+
+								.b-timetable-list__item.b-timetable-list-item
+									.b-timetable-list-item__timetable.b-timetable-list-item__block
+										.b-timetable-list-item__color.b-timetable-list-item__color--b
+										.b-timetable-list-item__text «Встреча с победителями»
+									.b-timetable-list-item__location.b-timetable-list-item__block
+										.b-timetable-list-item__img
+											img(src="/f/img/location-ico.svg", alt="...")
+										.b-timetable-list-item__text Телецентр Останкино <br> Москва. Ул. Академика Королева, 12
+									.b-timetable-list-item__time.b-timetable-list-item__block
+										.b-timetable-list-item__img
+											img(src="/f/img/clock-ico.svg", alt="...")
+										.b-timetable-list-item__text 15:30
+									.b-timetable-list-item__info
+										p 
+											strong Региональный отбор. Эфир.
+										p Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+									.b-timetable-list-item__btn
+										button Добавить событие в мой календарь
+
+								.b-timetable-list__item.b-timetable-list-item
+									.b-timetable-list-item__timetable.b-timetable-list-item__block
+										.b-timetable-list-item__color.b-timetable-list-item__color--o
+										.b-timetable-list-item__text Запись эфира
+									.b-timetable-list-item__location.b-timetable-list-item__block
+										.b-timetable-list-item__img
+											img(src="/f/img/location-ico.svg", alt="...")
+										.b-timetable-list-item__text Телецентр Останкино <br> Москва. Ул. Академика Королева, 12
+									.b-timetable-list-item__time.b-timetable-list-item__block
+										.b-timetable-list-item__img
+											img(src="/f/img/clock-ico.svg", alt="...")
+										.b-timetable-list-item__text 15:30
+									.b-timetable-list-item__info
+										p 
+											strong Эфир.
+										p Таким образом, граница обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Каждый из нас понимает очевидную вещь: высокотехнологичная концепция общественного уклада прекрасно подходит для реализации поставленных обществом задач. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет, превозмогая сложившуюся непростую экономическую ситуацию, в равной степени предоставлены сами себе.
+									.b-timetable-list-item__btn
+										button Добавить событие в мой календарь
+
+						.b-timetable__ritem.b-list__item
+							include _blocks/network

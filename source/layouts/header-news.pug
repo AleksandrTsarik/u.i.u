@@ -1,0 +1,94 @@
+header.header.header-news
+	.content-wrapper
+		.header__inner
+			.header-left
+				.header-left__inner
+					.header__logo
+						a(href="/html/main.html")
+							img(src="/f/img/header/logo.png", alt="logo")
+					.header-left__text
+						| Всероссийская  открытая  телевизионная  гуманитарная  олимпиада <br /> «Умницы <br />  и Умники»
+			.header-right
+				.header-right__inner
+					.header-right__info
+						div
+							a(href="#") медиа
+						div 
+							a(href="#") частые вопросы
+						div
+							a(href="#") КОНТАКТЫ
+
+						.header-right__info-input
+							form.js-show
+								span.header-lens 
+									img(src="/f/img/header/lens.svg", alt="lens")
+								label.header-right__label
+									input(type="text" class="header-right__input" placeholder="введите запрос")
+									button(type="subbmit")
+										img(src="/f/img/lens-ico.svg", alt="")
+
+					include ../_blocks/header-menu
+				.burger.js-active-parent
+					div
+					div
+					div
+	.content-wrapper.content-wrapper--mobile
+		.header-slider-wrap
+			.header-slider--circle
+			.header-slider
+				.header-slider__inner
+					-
+						var slider = [ 
+							{
+								img: '/f/img/header/slide1.jpg',
+								date: '25 сентября 10:00',
+								text: 'Новый выпуск «Умницы и Умники» на Первом канале.',
+								tabTilte: '«Греция древняя и недревняя».',
+								tabText: 'Встреча четвертая',
+								id: '1',
+							},
+							{
+								img: '/f/img/header/slide2.jpg',
+								date: '39 сентября 99:00',
+								text: 'Новый выпуск «Умницы и Умники» на Первом канале.',
+								tabTilte: '«Вопрос на засыпку».',
+								tabText: 'Документальный фильм о Юрии, Документальный фильм о Юрии Документальный фильм о ЮрииДокументальный фильм о Юрии Документальный фильм о Юрии',
+								id: '2',
+							},
+							{
+								img: '/f/img/header/slide1.jpg',
+								date: '1 июня 18:00',
+								text: 'Новый выпуск «Умницы и Умники» на Первом канале.',
+								tabTilte: 'Умницы и Умники.',
+								tabText: 'Юбилейный выпуск',
+								id: '3',
+							},
+							{
+								img: '/f/img/header/slide2.jpg',
+								date: '25 сентября 10:00',
+								text: 'Новый выпуск «Умницы и Умники» на Первом канале.',
+								tabTilte: '«Греция древняя и недревняя».',
+								tabText: 'Встреча четвертая',
+								id: '4',
+							},
+						]
+					each item in slider
+						.b-header-slide(data-news-content="" + item.id)
+							.header-news__img
+								.header-news__inner
+									img(src="" +item.img, alt="")
+									.header-news__info
+										.header-news__date
+											span !{item.date}
+										.header-news__text !{item.text}
+								.header-slider-text
+									.header-slider__title !{item.tabTilte}
+									.header-slider__subtitle !{item.tabText}
+									.header-slider__text !{item.text}
+
+
+
+							
+								
+
+								

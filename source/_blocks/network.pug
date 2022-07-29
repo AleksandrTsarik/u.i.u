@@ -1,0 +1,23 @@
+-
+   var network = [
+      {
+         image:'/f/img/network/vk.svg',
+      },
+      {
+         image:'/f/img/network/telegram.svg',
+      },
+      {
+         image:'/f/img/network/viber.png',
+      },
+   ]
+
+
+.b-network
+   .b-network__left
+      a(href="#").b-network__item
+         img(src="/f/img/network/link.svg", alt="") 
+   .b-network__right
+      each item in network
+         a(href="#").b-network__item
+            img(src="" + item.image alt="...")
+         

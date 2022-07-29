@@ -1,0 +1,33 @@
+-
+	var pag = [
+		{
+			number: '1',
+			active: '_active'
+		},
+		{
+			number: '2',
+			active: ''
+		},
+		{
+			number: '3',
+			active: ''
+		},
+		{
+			number: '4',
+			active: ''
+		},
+		{
+			number: '5',
+			active: ''
+		},
+		{
+			number: 'Дальше',
+			active: ''
+		},
+	]
+
+.b-pagination
+	.b-pagination__list
+		each item in pag
+			.b-pagination__item(class="" + item.active)
+				a(href="#") !{item.number}

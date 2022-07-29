@@ -1,0 +1,34 @@
+header.header.header-page
+	.content-wrapper
+		.header__inner
+			.header-left
+				.header-left__inner
+					.header__logo
+						a(href="/html/main.html")
+							img(src="/f/img/header/logo.png", alt="logo")
+					.header-left__text
+						| Всероссийская  открытая  телевизионная  гуманитарная  олимпиада <br /> «Умницы <br />  и Умники»
+			.header-right
+				.header-right__inner
+					.header-right__info
+						div
+							a(href="#") медиа
+						div 
+							a(href="#") частые вопросы
+						div
+							a(href="#") КОНТАКТЫ
+						.header-right__info-input
+							form.js-show
+								span.header-lens
+									img(src="/f/img/header/lens.svg", alt="lens")
+								label.header-right__label
+									input(type="text" class="header-right__input" placeholder="введите запрос")
+									button(type="subbmit")
+										img(src="/f/img/lens-ico.svg", alt="")
+
+
+					include ../_blocks/header-menu
+				.burger.js-active-parent
+					div
+					div
+					div

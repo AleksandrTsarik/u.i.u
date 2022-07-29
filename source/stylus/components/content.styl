@@ -1,0 +1,312 @@
+.b
+	&-content
+		h3
+			padding-bottom 15px
+		&-slider
+			margin-top 40px
+			.b-block-iframe
+				margin-bottom 0
+			&__tab
+				&-container
+					margin-bottom: 40px
+					overflow: hidden
+					@media $tabletB
+						margin: 0 -50px 40px
+					@media $phone
+						margin: 0 -20px 40px
+					img
+						display: block
+						margin: 0 auto
+				&-link
+					&.active
+						opacity: 0.5
+				&-links
+					display: flex
+					justify-content: center
+					overflow: hidden
+					position: relative
+					a
+						display: block
+						margin: 0 auto
+						overflow: hidden
+						width: 190px
+						height: 110px
+						@media $phone
+							width: 100%
+							height: 60px
+						@media $phoneSbefore
+							width: 90%
+						img 
+							width: 100%
+							height: 100%
+							object-fit: cover
+					.slick-list
+						max-width: 60%
+						overflow: hidden
+						@media $phone
+							max-width: 300px
+						@media $phoneSbefore
+							max-width: 280px
+					.slick-track
+						align-items: center
+
+					.slick-slider
+						position: relative
+
+					.slick-slide
+						margin: 0 15px
+						display: flex
+						justify-content: center
+						align-items: center
+						position: relative
+						@media $phoneSbefore
+							margin: 0 10px	
+					.slick-arrow
+						position: absolute
+						text-indent: -9999px
+						display: block
+						width: 30px
+						height: 30px
+						border-bottom: solid 4px $green
+						border-left: solid 4px $green
+						top: 50%
+						@media $phone
+							height: 25px
+							width: 25px
+						@media $phoneSbefore
+							width: 18px
+							height: 18px
+					.slick-next
+						left: 100px
+						transform: translateY(-50%) rotate(45deg) 
+						@media $beforePhoneS
+							left: 5%
+						@media $phoneS
+							left: 2%
+						@media $phoneSbefore
+							left: 1%
+
+					.slick-prev
+						right: 100px
+						transform: translateY(-50%) rotate(-135deg)
+						@media $beforePhoneS
+							right: 5%
+						@media $phoneS
+							right: 2%
+						@media $phoneSbefore
+							right: 1%
+
+		&__blockquote
+			font-style: normal
+			font-weight: 400
+			font-size: 15px
+			line-height: 1.5em
+			color: $black
+			background: #FAFAFA
+			padding: 50px
+			position: relative
+			margin-bottom 60px
+			@media $phone
+				padding: 25px 30px
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: 0
+				width: 10px
+				height: 100%
+				background: $green
+			p
+				&:last-child
+					padding-bottom 0
+		&-img
+			&__subtext
+				font-weight: 400
+				font-size: 12px
+				line-height: 1.3em
+				color: $signature
+				padding-top 10px
+		&__float
+			//clear: both
+			display: block
+			position: relative
+			div
+				img
+					max-width: 315px
+					@media $beforePhoneB 
+						max-width: 100%
+			&:after
+				content: ''
+				clear: both
+				display: table
+			&-img
+				&--small
+					div
+						img
+							max-width: 275px
+			&-pb
+				padding-bottom 40px
+			&--right
+				div
+					&:first-child
+						float: left
+						margin-right 20px
+						margin-bottom 10px
+						@media $beforePhoneB 
+							float: none
+							margin-bottom 20px
+							margin-right 0
+			&--left
+				div
+					&:first-child
+						float: right
+						margin-left: 20px
+						margin-bottom 10px
+						@media $beforePhoneB 
+							margin-left 0
+							float: none
+		h2
+			font-weight: 700
+			// font-size: 24px
+			// line-height: 1.1em
+			color: $black
+			//margin-bottom 60px
+			max-width: 95%
+		p
+			font-weight: 400
+			font-size: 15px
+			line-height: 1.4em
+			color: $black
+			margin-bottom 20px
+			max-width: 95%
+			@media $tabletB
+				max-width: 100%
+		&__list
+			nav
+				//margin-bottom 40px
+				ol
+					list-style-type auto
+					padding-left 1.2em
+					font-size: 15px
+
+					
+
+		&-tabs
+			padding-bottom 40px
+		&-tab
+			&__input
+				appearance: none
+				-moz-appearance: none
+				width: 1px
+				height: 1px
+				position: absolute
+				left: -500px
+				top: 0
+			&__label
+				border-bottom: solid 1px $input
+				display: block
+				position: relative
+				margin-top 40px
+				@media $phone
+					margin-top 30px
+			&__name
+				font-weight: 500
+				font-size: 18px
+				line-height: 1.3em
+				color: $black
+				display: block
+				position: relative
+				padding-bottom 10px
+				padding-right 35px
+				@media $phone
+					font-size: 15px
+
+				&:after
+					content: ''
+					width: 13px
+					height: 13px
+					border-bottom: solid 2px $green
+					border-right: solid 2px $green
+					position: absolute
+					right: 8px
+					bottom: 13px
+					transform: rotate(45deg)
+					transition: .4s
+			&__content
+				font-weight: 400
+				font-size: 15px
+				line-height: 1.5em
+				color: $black
+				display: flex
+				align-items: flex-start
+				overflow: hidden
+				height: 0
+				transition: .3s
+				img
+					margin-right 20px
+			&__checked
+				height: 0
+				visibility: hidden
+				opacity: 0
+				transition: .4s
+			&__input:checked + &__name
+				&:after
+					transform: rotate(220deg)
+					transition: .4s
+			&__input:checked ~ &__checked
+				visibility: visible
+				opacity 1
+				height: 100%
+				.b-content-tab__content
+					height: 100%
+					padding-top 10px
+
+		&__file
+			h5
+				font-weight: 500
+				font-size: 18px
+				line-height: 1.3em
+				color: $black
+				padding-bottom 20px
+		&-file
+			&__list
+				display: flex
+				flex-wrap: wrap
+				margin: 0 -10px 0
+				@media $tablet
+					max-width: 100%
+				@media $beforePhoneS
+					margin: 30px 0 0 
+				&--mw
+					max-width: 60%
+					@media $tablet
+						max-width: 100%
+			&__item
+				flex: 0 0 50%
+				max-width: 50%
+				display: flex
+				padding: 10px
+				@media $beforePhoneS
+					flex: 0 0 100%
+					max-width: 100%
+					padding: 10px 0 
+			&__img
+				width: 35px
+				max-width: 35px
+				flex: 0 0 35px
+				margin-right 10px
+			&__info
+				p
+					font-weight: 400
+					font-size: 15px
+					line-height: 1.5em
+					color: $black
+					margin-bottom 0
+				a
+					font-weight 500
+					color: $linkFont
+					&:hover
+						color: $linkHover
+.b-content-slider__slide + .b-content-slider__slide
+	margin-left 20px

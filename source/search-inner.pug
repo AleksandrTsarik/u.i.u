@@ -1,0 +1,76 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'search';
+block content
+	.page-container.page-container--fix-header
+
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'Поиск', href:''}
+			]})
+		.content-wrapper
+			.b-search.b-page
+				.b-title-strip
+				.b-search-list.b-list__wrap
+						.b-search__item.b-list__item
+							.b-list__item-img
+									img(src="/f/img/search-ico.svg", alt="")
+
+						.b-search__item.b-list__item
+							h1.b-search__title Результаты поиска «очередной выпуск»
+							nav.b-search__list
+								ol
+									-
+										var list = [
+											{
+												title: 'Очередной выпуск (7 букв)',
+												span: '',
+												link: 'xcas.ru›43229-ocherednoj-vypusk',
+												text: 'Очередной выпуск слово из 7 букв. ... На этой странице можно узнать ответ для кроссворда или сканворда с заданием',
+											},
+											{
+												title: 'Очередной выпуск журнала ',
+												span: '— 5 букв сканворд ',
+												link: 'xcas.ru›43229-ocherednoj-vypusk',
+												text: 'Очередной выпуск слово из 7 букв. ... На этой странице можно узнать ответ для кроссворда или сканворда с заданием',
+											},
+											{
+												title: 'Очередной выпуск журнала ',
+												span: ' — 5 букв сканворд',
+												link: 'poncy.ru›crossword/?mask…',
+												text: 'Смотрите в этом выпуске: в ЛНР союзные силы замкнули котел вокруг большой группы националистов; Минобороны публикует кадры работы российской артиллерии и работы специального поезда «Волга»; в ЛНР вручены награды... ',
+											},
+											{
+												title: 'Очередной выпуск (7 букв)',
+												span: '',
+												link: 'xcas.ru›43229-ocherednoj-vypusk',
+												text: 'Очередной выпуск слово из 7 букв. ... На этой странице можно узнать ответ для кроссворда или сканворда с заданием ',
+											},
+											{
+												title: 'Очередной выпуск журнала ',
+												span: '— 5 букв сканворд',
+												link: 'poncy.ru›crossword/?mask…очередной выпуск журнала',
+												text: 'Смотрите в этом выпуске: в ЛНР союзные силы замкнули котел вокруг большой группы националистов; Минобороны публикует кадры работы российской артиллерии и работы специального поезда «Волга»; в ЛНР вручены награды... ',
+											},
+											{
+												title: 'Очередной выпуск журнала',
+												span: '— 5 букв сканворд',
+												link: 'poncy.ru›crossword/?mask…очередной выпуск журнала',
+												text: 'Смотрите в этом выпуске: в ЛНР союзные силы замкнули котел вокруг большой группы националистов; Минобороны публикует кадры работы российской артиллерии и работы специального поезда «Волга»; в ЛНР вручены награды... ',
+											},
+
+										]
+									each item in list
+										li.b-search-item
+											.b-search-item__inner
+												.b-search-item__title !{item.title}
+													if item.span !=''
+														span !{item.span}
+												a(href="#").b-search-item__link !{item.link}
+												.b-search-item__text !{item.text}
+
+								include _blocks/pagination
+
+						.b-search__item.b-list__item
+							include _blocks/network

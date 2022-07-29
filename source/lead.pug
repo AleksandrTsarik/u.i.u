@@ -1,0 +1,88 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'ПРИМЕР';
+block content
+	.page-container.page-container--fix-header
+		.content-wrapper
+
+			.b-lead
+				.b-lead-menu
+					.b-lead-menu__name Нумероновый список
+					nav.b-nav-menu.b-nav-menu--type
+						ol
+							li Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, excepturi?
+							li Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex expedita, iusto suscipit accusantium incidunt magni.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam omnis voluptas, corrupti doloremque fugit quos eligendi deserunt, voluptatum odio dignissimos impedit totam incidunt dolorem labore.
+					.b-lead-menu__name Не нумероновый список
+					nav.b-nav-menu.b-nav-menu--type
+						ul 
+							li Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, excepturi?
+							li Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex expedita, iusto suscipit accusantium incidunt magni.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam omnis voluptas, corrupti doloremque fugit quos eligendi deserunt, voluptatum odio dignissimos impedit totam incidunt dolorem labore.
+
+					.b-lead-menu__name Не нумероновый список
+					nav.menu
+						ul.menu__list.menu__list-disc
+							li Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, excepturi?
+								ul.menu__sublist
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								ul.menu__sublist
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+					nav.menu
+						ul.menu__list
+							li Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, excepturi?
+								ul.menu__sublist
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								ul.menu__sublist
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+					br
+					.b-lead-menu__name Нумероновый список inside
+					nav.menu
+						ol.menu__list.menu__list-numb.menu__list-inside
+							li Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, excepturi?
+								ul.menu__sublist
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								ul.menu__sublist
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+					br
+					.b-lead-menu__name Нумероновый список outside
+					nav.menu
+						ol.menu__list.menu__list-numb.menu__list-outside
+							li Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, excepturi?
+								ul.menu__sublist
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							li Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								ul.menu__sublist
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+									li Lorem ipsum dolor sit.
+
+
+			.cookie
+				.cookie-wrap
+					.cookie__inner
+						.cookie__text
+							| Мы используем файлы cookie. Подробная информация в политике конфиденциальности.  Вы можете запретить сохранение cookie  в настройках своего браузера.
+						.cookie__btn
+							.cookie__btn-inner
+								button.active Принять
+								button Закрыть
+								

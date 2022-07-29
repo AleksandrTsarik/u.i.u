@@ -1,0 +1,113 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'Эссе';
+block content
+	.page-container.page-container--fix-header
+		.content-wrapper
+			.b-page__img.b-page__img-essay
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'Участие в Олимпиаде', href:'#'},
+         {title:'Форма отправки эссе', href:''}
+			]})
+		.content-wrapper
+			.b-essay__inner
+				h1.b-essay__title.b-title.b-title-strip.b-title__img ФОРМА ОТПРАВКИ ЭССЕ
+				.b-essay__wrap.b-list__wrap
+
+						.b-essay__item.b-list__item
+							.b-list__item-img
+									img(src="/f/img/essay-ico.svg", alt="")
+
+						.b-essay__item.b-list__item
+							.b-essay-form
+								form(action="")
+									.b-essay-form__inner
+										.b-essay-form__top
+											.b-essay-form__item
+												.b-essay-form__foto 
+													.b-essay-form__foto-name Фотография
+													.b-essay-form__foto-block
+														.b-essay-form__foto-preview#dropbox
+														.b-essay-form__foto-controls
+															.b-essay-form__foto-controls--refresh.js-file-refresh
+															.b-essay-form__foto-controls--remove.js-file-remove
+														.b-essay-form__foto-block-inner
+															.b-essay-form__foto-img
+																img(src="/f/img/img-ico.svg", alt="")
+															.b-essay-form__foto-text
+																| Перетащите фото сюда или нажмите кнопку ниже, чтобы выбрать их на компьютере
+															.b-essay-form__foto-load
+																input(type="file"  id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)")
+																label(for="fileElem") Добавить фото																
+													.b-essay-form__foto-info Минимальное разрешение изображения 800х800px Формат — jpeg
+											.b-essay-form__item
+												.b-essay-form-block
+													.b-essay-form-block__name Фамилия
+													label.b-essay-form-block__label
+														input(type="text" required autocomplete="off" class="b-essay-form-block__input js-vall" placeholder="Ваша фамилия" name="")
+													
+												.b-essay-form-block
+													.b-essay-form-block__name Имя
+													label.b-essay-form-block__label
+														input(type="text" required autocomplete="off" class="b-essay-form-block__input js-vall" placeholder="Ваше имя" name="")
+
+												.b-essay-form-block
+													.b-essay-form-block__name Отчество
+													label.b-essay-form-block__label
+														input(type="text" required autocomplete="off" class="b-essay-form-block__input js-vall" placeholder="Ваше отчество" name="")
+
+												.b-essay-form-block
+													.b-essay-form-block__name Email
+													label.b-essay-form-block__label
+														input(type="email" required autocomplete="off" class="b-essay-form-block__input js-email" placeholder="Ваш E-mail" name="")
+
+												.b-essay-form-block
+													.b-essay-form-block__name Номер телефона
+													label.b-essay-form-block__label
+														input(type="tel" required autocomplete="off" class="b-essay-form-block__input js-phone" placeholder="+7 (999) 999 99 99" name="")
+
+										.b-essay-form__bottom.b-essay-form-bottom
+											.b-essay-form-bottom-block
+												.b-essay-form-bottom-block__title.b-essay-form-bottom__title Почтовый адрес
+												.b-essay-form-bottom-block-input
+													label.b-essay-form-bottom-block__label Индекс
+														input(type="tel" required class="b-essay-form-bottom-block__input b-essay-form-block__input js-index ")
+													label.b-essay-form-bottom-block__label Город
+														input(type="text" required class="b-essay-form-bottom-block__input b-essay-form-block__input ")
+													label.b-essay-form-bottom-block__label Улица
+														input(type="text" required class="b-essay-form-bottom-block__input b-essay-form-block__input ")
+													label.b-essay-form-bottom-block__label Дом
+														input(type="tel" required class="b-essay-form-bottom-block__input b-essay-form-block__input")
+													label.b-essay-form-bottom-block__label Квартира
+														input(type="tel" class="b-essay-form-bottom-block__input b-essay-form-block__input")
+											.b-essay-form-bottom-textarea
+												.b-essay-form-bottom-textarea__title.b-essay-form-bottom__title Эссе
+												.b-essay-form__textarea-block
+													.b-essay-form__textarea-title Тема эссе
+													.b-essay-form__textarea
+														textarea(name="")
+												.b-essay-form__textarea-block
+													.b-essay-form__textarea-title Текст эссе
+													.b-essay-form__textarea
+														textarea(name="")
+											.b-essay-form__bottom-row
+												| Загрузите эссе в формате Word. Максимальный размер файла — 30Mb
+											.b-essay-form__bottom-btn.b-essay-form__btn
+												input(type="file" name="file")
+												button 	
+													label(for="file") Загрузить эссе
+													
+		
+										.b-essay-form__checkbox
+											label.b-essay-form__checkbox-label Настоящим согласием подтверждаю, что проинформирован о том, что под обработкой персональных данных понимаются действия, определённые в Федеральном законе № 152-ФЗ от 27.07.2006 «О персональных данных», а именно: сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача (предоставление, доступ), блокирование, удаление персональных данных, совершаемые с использованием средств автоматической, а также неавтоматической обработки данных. 		
+												input(type="checkbox",  required name="" class="b-essay-form__checkbox-input")
+												span.b-essay-form__checkbox-checked
+
+									.b-essay-form__btn.b-essay-form__btn--send
+										button(type="submit") Отправить заявку
+											
+												
+						.b-essay__ritem.b-list__item 
+							include _blocks/network

@@ -1,0 +1,27 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'search';
+block content
+	.page-container.page-container--fix-header
+
+		+breadcrumbs({path:[
+			{title:'Главная', href:'#'},
+			{title:'Поиск', href:''}
+			]})
+		.content-wrapper
+			.b-search.b-page
+				.b-title-strip
+				.b-search-list.b-list__wrap
+						.b-search__item.b-list__item
+							.b-list__item-img
+									img(src="/f/img/search-ico.svg", alt="")
+
+						.b-search__item.b-list__item
+							h1.b-search__title Результаты поиска «очередной выпуск»
+							.b-search__text
+								| По вашему запросу, к сожалению, ничего не найдено. <br /> Пожалуйста, попробуйте изменить ваш запрос.
+							label.b-search__label
+								input(type="text" class="b-search__input")
+								span.b-search__ico
+									img(src="/f/img/lens-ico.svg", alt="")

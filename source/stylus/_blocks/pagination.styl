@@ -1,0 +1,26 @@
+.b
+	&-pagination
+		margin-top: 60px
+		&__list
+			display: flex
+		&__item
+			&._active
+				color: $white
+				background: $black
+				a
+					color: $white
+					&:hover
+						cursor: default
+						color: $white
+			a
+				display: block
+				transition: .4s
+				padding: 3px 11px
+				border: solid 1px transparent
+
+				font-weight: 600
+				font-size: 15px
+				line-height: 1.5em
+				&:hover
+					border-color: black
+					color: $black

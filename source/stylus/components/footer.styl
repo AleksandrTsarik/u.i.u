@@ -1,0 +1,131 @@
+.footer
+	background: $footer
+	padding: 65px 0 110px
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin-bottom 40px
+	&__menu
+		margin-bottom 35px
+		li
+			a
+				color: $darkgray
+				font-size: 15px
+				line-height: 1.3em
+				font-weight: 400
+				display: inline-flex
+				position: relative
+				text-decoration: none
+				transition: .3s
+				&:hover
+						color: $black
+		// &--top
+		// 	margin-bottom: 35px
+		// 	@media $phone
+		// 		margin-bottom 0
+	&__item
+		&:nth-child(1)
+			flex: 0 0 27%
+			max-width: 27%
+			@media $desktop
+				order: 2
+				flex: 0 0 50%
+				max-width: 50%
+			@media $phone
+				flex: 0 0 100%
+				max-width: 100%
+				order: 3
+		&:nth-child(2)
+			flex: 0 0 27%
+			max-width: 27%
+			@media $desktop
+				order: 3
+				flex: 0 0 50%
+				max-width: 50%
+			@media $phone
+				flex: 0 0 100%
+				max-width: 100%
+				order: 2
+				margin-bottom 20px
+		&:nth-child(3)
+			flex: 0 0 46%
+			max-width: 46%
+			@media $desktop
+				flex: 0 0 100%
+				max-width: 70%
+				margin-bottom 50px
+				order: 1
+			@media $phone
+				max-width: 100%
+
+		&-title
+			color: $darkgray
+			font-size: 15px
+			line-height: 1.3em
+			font-weight: 400
+		&-link
+			display: flex
+			div
+				margin-top 15px
+			div + div
+				margin-left 20px
+	&-row
+		font-weight: 400
+		font-size: 15px
+		line-height: 1.5em
+		color: $black
+
+.f
+	&-form
+		&-block
+			&__label
+				font-weight: 400
+				font-size: 15px
+				line-height: 1.3em
+				color: $black
+			&__input
+				input
+					border-bottom: 1px solid $input
+					font-size: 15px 
+					font-weight: 400
+					line-height: 1.5em
+					margin-bottom 25px
+					margin-top 10px
+					height: 30px
+			&__textarea
+				margin-bottom 25px
+				margin-top 10px
+				textarea
+					border-bottom: solid 1px $input
+					height: 30px
+			&__btn
+				font-weight: 700
+				font-size: 18px
+				line-height: 1.2em
+				color: $black
+				transition: .5s
+				display: block
+
+				letter-spacing: -0.01em
+				color: $input
+				border: solid 1px $input
+				padding: 19px 30px
+				&:disabled
+					color: $input
+					border: solid 1px $input
+					cursor: default
+				// &:hover
+				// &:active
+				&:focus
+					//transform: scale(1.1)
+					color: $black
+					border: solid 1px $black
+
+		&__title
+			font-weight: 700
+			font-size: 16px
+			line-height: 1.2em
+			color: $black
+			margin-bottom 20px
+	
+               
